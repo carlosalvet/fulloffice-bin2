@@ -45,9 +45,9 @@ convert_utf8() {
 	
 	local destiny="${destiny_folder}/utf8.${basename}"
 
-	iconv -f $encode_type -t utf-8 -o $destiny $origin &> /dev/null
+	iconv -f $encode_type -t utf-8 -o $destiny $origin
 
-	if [ $? != 0]; then
+	if [ $? != 0 ]; then
 		exit 1
 	fi
 
@@ -69,7 +69,6 @@ fi
 encode_type=`encodetype ${temp_file[0]} $encode_default` 
 if [ $? == 1 ]; then
 	echo "WARNING: El formato del archivo no es reconocido $file_encode  se usará $encode_default en su lugar"
-	exit 2
 fi
 
 convert_utf8 $encode_type ${temp_file[0]} $destiny_folder
