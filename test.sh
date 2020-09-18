@@ -55,11 +55,11 @@ convert_utf8() {
 filename_from_ftp[0]="../temp/dc.lista-productos"
 filename_from_ftp[1]="../temp/ct.lista-productos"
 destiny_folder='../private'
-declare -A ftp_host
-ftp_host[1]['name']="ftp://fulloffice.com.mx"
-file_uri="Lista%20de%20Precios%20101444.csv"
-host_user='fulloffice';
-host_password='Fulloffice2020!'
+#declare -A ftp_host
+#ftp_host[1]['name']="ftp://fulloffice.com.mx"
+#file_uri="Lista%20de%20Precios%20101444.csv"
+#host_user='fulloffice';
+#host_password='Fulloffice2020!'
 
 ftp_source ${filename_from_ftp[0]};
 if [ $? == 1 ]; then
